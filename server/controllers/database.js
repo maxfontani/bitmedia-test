@@ -199,15 +199,11 @@ export async function handleDBProfile(req, res, db) {
             return addWeeks(dateFrom, 1)
         }
     }
-
-    console.log('REQ_BODY: ', req.body);
     
     //Read the id and time period from the request. Default dateFrom is 2019-10-23
     const id = req.body.id
     const dateFrom = checkDateFrom(req.body.dateFrom)
     const dateTo = checkDateTo(req.body.dateTo)
-
-    console.log('FROM/TO: ', dateFrom, dateTo);
 
     if (!id || (typeof id !== 'number')) {
         res.status(400).json("{'Fail':'INVALID ID'}")
@@ -223,8 +219,6 @@ export async function handleDBProfile(req, res, db) {
         })
 
         const daysArrFormatted = daysArrRaw.map(rawDate => lightFormat(rawDate, 'yyyy-MM-dd'))
-
-        console.log('FOR<M',daysArrFormatted);
 
         for(let i=0; i < daysArrFormatted.length; i++) {
             sql.push(`SELECT page_views, clicks FROM users_statistic WHERE user_id=${id} AND date="${daysArrFormatted[i]}"`)
@@ -247,7 +241,6 @@ export async function handleDBProfile(req, res, db) {
         }
     } catch { err => {
         if (err === RangeError) res.status(400).json("{'Fail':'INVALID DATE RANGE'}")
-        console.log(err)
         res.status(400).json("{'Fail':'DB ERROR'}")
     }}
 }

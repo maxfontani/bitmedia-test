@@ -25,7 +25,6 @@ export default function Profile({ userInfo }) {
   if (userInfo.first_name) fullName = userInfo.first_name + ' ' + userInfo.last_name
   
   function onSubmit() {
-    console.log('onSUBMIT', dbRequest)
     if (dbRequest.dateFrom > dbRequest.dateTo) {
       alert("Improper date order")
     } else {
@@ -38,7 +37,6 @@ export default function Profile({ userInfo }) {
       })
       .then(res => res.json())
       .then(chartDataRaw => {
-        console.log('FET CHART DATA: ', chartDataRaw);
         setChartDataRaw(chartDataRaw)})
     }
 }
@@ -62,7 +60,6 @@ export default function Profile({ userInfo }) {
               onKeyDown={(e) => e.preventDefault()}
               onChange={e => {
                 const newDateFrom = new Date(e.target.value).toISOString()
-                console.log('CHANGE: ', newDateFrom);
                 setDbRequest(prevState => {return {...prevState, dateFrom: newDateFrom }})
                 }}
             />
@@ -78,7 +75,6 @@ export default function Profile({ userInfo }) {
               onKeyDown={(e) => e.preventDefault()}
               onChange={e => {
                 const newDateTo = new Date(e.target.value).toISOString()
-                console.log('CHANGE: ', newDateTo);
                 setDbRequest(prevState => {return {...prevState, dateTo: newDateTo }})
                 }}
             />
