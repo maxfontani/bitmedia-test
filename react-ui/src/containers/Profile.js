@@ -28,7 +28,7 @@ export default function Profile({ userInfo }) {
     if (dbRequest.dateFrom > dbRequest.dateTo) {
       alert("Improper date order")
     } else {
-      fetch(process.env.REACT_APP_HOST + '/api/dbprofile', {
+      fetch('/api/dbprofile', {
         method: 'post',
         headers: {
           'Content-Type': 'application/json'

@@ -22,7 +22,7 @@ export default function Users() {
 
   
   useEffect(() => {
-      fetch(process.env.REACT_APP_HOST + '/api/dbstats', {
+      fetch('/api/dbstats', {
         method: 'post',
         headers: {
           'Content-Type': 'application/json'
