@@ -1,0 +1,89 @@
+.profile {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    color: black;
+    width: 100%;
+    min-height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.profile-name {
+    flex: 0;
+    width: 80%;
+    color: black;
+    font-size: 20px;
+    margin: 10px auto;
+}
+
+.profile-name h2 {
+    margin: 0px;
+}
+
+.profile-input-wide {
+    position: relative;
+    width: 100%;
+}
+
+.profile-input {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: center;
+    width: 80%;
+    min-height: 45px;
+    text-align: center;
+    color: black;
+    font-size: 20px;
+    margin: 10px auto;
+}
+
+.profile-input label {
+    font-size: 20px;
+    margin: 10px;
+}
+
+.profile-input button {
+    height: 37px;
+    width: 70px;
+    margin: 10px;
+}
+
+.profile-input button:hover {
+    font-weight: bolder;
+    color: honeydew;
+    background-color: #3A80BA;
+}
+
+.profile-input input {
+    height: 35px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin: 10px;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.chart-wide {
+    position: relative;
+    width: 100%;
+}
+
+.chart-content {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.views {
+    margin-top: 25px;
+}
+
+label {
+    font-size: 32px;
+    font-weight: bolder;
+}

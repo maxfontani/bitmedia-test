@@ -1,0 +1,21 @@
+{
+  "name": "cra-node",
+  "description": "Web app featuring create-react-app UI + Node API",
+  "scripts": {
+  },
+  "env": {
+  },
+  "formation": {
+    "web": {
+      "quantity": 1
+    }
+  },
+  "addons": [
+
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ]
+}

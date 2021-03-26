@@ -1,0 +1,37 @@
+table {
+    color: black;
+    border: 10px solid white;
+    border-radius: 40px;
+    width: 100%;
+}
+
+thead, tbody {
+  border: 3px solid white;
+}
+
+thead, td {
+    padding: 5px;
+  }
+
+tr:nth-child(even) {
+    background-color: #F1F1F1;
+}
+
+tr:nth-child(odd) {
+    background-color: #FBFBFB;
+}
+
+#th01 {
+    height: 48px;
+}
+
+#th01 > tr {
+    color: white;
+    background-color: #3A80BA;
+}
+
+tbody tr {
+    height: 32px;
+    cursor: pointer;
+}
+
